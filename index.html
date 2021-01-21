@@ -152,6 +152,223 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-C语言学习笔记（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/21/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/">C语言学习笔记（1）</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/21/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2021-01-21T07:49:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="c语言中常用来表示整数的类型"><a href="#c语言中常用来表示整数的类型" class="headerlink" title="c语言中常用来表示整数的类型"></a>c语言中常用来表示整数的类型</h1><ol>
+<li><p>%d    十进制整数</p>
+</li>
+<li><p>%o    八进制整数</p>
+</li>
+<li><p>%x    十六进制整数  </p>
+<p><em>不包括二进制</em>  </p>
+</li>
+</ol>
+<p>八进制表示  0+数字（数字应属于0~7）  </p>
+<p>十六进制表示 0x+数字（数字属于0<del>9，a</del>f）</p>
+<hr>
+<h1 id="C语言基本数据类型"><a href="#C语言基本数据类型" class="headerlink" title="C语言基本数据类型"></a>C语言基本数据类型</h1><ol>
+<li>整形 int等整数类型</li>
+<li>实型 float，double等实数类型<br><br>合法形式举例：<br></li>
+</ol>
+<ul>
+<li>0.5</li>
+<li>.5</li>
+<li>0.5</li>
+<li>5.<blockquote>
+<p>e表示10的几次方<br>例：12.e2=12.0*10^2=1200.000000<br>1e+1=1e0+1=1e1=10.000000<br>对比：<br></p>
+<ol>
+<li>e2（不合法）（也不能作为常量）<br><br>1e2=100.000000<br></li>
+<li> 1e（不合法）<br><br>1e1=10.000000<br><br>1e+1=10.000000<br><br>1e-1=0.100000<br><br>1e+1+1=11.000000<br></li>
+</ol>
+<p>总结：e左右必有数字，e后第一个+x或-x的+，-代表了e的次方的符号</p>
+</blockquote>
+</li>
+</ul>
+<ol start="3">
+<li>字符型 char<ol>
+<li>单引号赋值<br>  1.’a’<br>  2.’\xef’</li>
+<li>整数赋值（八，十，十六进制均可，对应ASCII码表）</li>
+<li>NULL</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="转义字符”-quot"><a href="#转义字符”-quot" class="headerlink" title="转义字符”&quot;"></a>转义字符”&quot;</h1><ol>
+<li>\后加单个字母<br><br>如\t,\a,\n,\\等</li>
+<li>\后加八进制整数，表示ASCII码表上的字符（八进制转十进制后对应）</li>
+<li>\后加多个字母<br><br>如\xef\xbf\xbd\xef\xbf\xbd -&gt; 锟斤拷</li>
+</ol>
+<hr>
+<h1 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h1><p>逻辑运算符两侧运算对象可以是任意类型数据<br><br>真假性:<br></p>
+<ul>
+<li>整形，实型：0假，其余均为真  </li>
+<li>字符型：’\0’假，其余均为真  </li>
+</ul>
+<p>逻辑运算时输入可为任意数，输出为0或1（整形）（实型和字符型未知）  </p>
+<hr>
+<h1 id="ASCII码表关键数"><a href="#ASCII码表关键数" class="headerlink" title="ASCII码表关键数"></a>ASCII码表关键数</h1><p>048 -&gt; 0<br><br>065 -&gt; A<br><br>097 -&gt; a<br><br>转义字符后可省略0<br><br>字符变量赋值时应省略0（避免被识别为八进制整数）<br></p>
+<hr>
+<h1 id="指针数组与数组指针"><a href="#指针数组与数组指针" class="headerlink" title="指针数组与数组指针"></a>指针数组与数组指针</h1><p>数组优先级大于取址优先级</p>
+<ul>
+<li>指针数组<br><code>*p[]</code><br>是一个数组，用来存放多个指针变量<br><br>如：用来指向字符串（字符串储存在内存中特定地址）</li>
+<li>数组指针<br><code>(*p)[]</code><br>是一个指针，用来指向数组，存放的是指针<br><br>如：<br><br></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	int temp[5] &#x3D; &#123;1,2,3,4,5&#125;;</span><br><span class="line">	int(*p1)[5] &#x3D; temp;</span><br><span class="line">	for (int i &#x3D; 0; i &lt; 5; i++) printf(&quot;%p\n&quot;,*(p1 + i));</span><br><span class="line">	for (int i &#x3D; 0; i &lt; 5; i++) printf(&quot;%p\n&quot;,*(*p1 + i));</span><br><span class="line">	int(*p2)[5] &#x3D; &amp;temp;</span><br><span class="line">	for (int i &#x3D; 0; i &lt; 5; i++) printf(&quot;%p\n&quot;, *(*p2 + i));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出为：<br><br>00CFF920  00CFF934  00CFF948 00CFF95C  00CFF970<br><br>00000001  00000002  00000003  00000004  00000005<br><br>00000001  00000002  00000003  00000004  00000005<br></p>
+<hr>
+<h1 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">定义array[4][5]，则：</span><br><span class="line">  *array -&gt; array[0][0]</span><br><span class="line">  *(array+1) -&gt; array[1][0]</span><br><span class="line">  *(*(array+1)+3) -&gt; array[1][3]</span><br></pre></td></tr></table></figure>
+<h2 id="数组指针与二维数组"><a href="#数组指针与二维数组" class="headerlink" title="数组指针与二维数组"></a>数组指针与二维数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">定义(*p)[]，则：</span><br><span class="line">*(*(p+1)+3)-&gt;array[1][3]</span><br></pre></td></tr></table></figure>
+<p><strong>c语言中，多维数组是一维数组的线性扩展</strong></p>
+<hr>
+<h1 id="解引用"><a href="#解引用" class="headerlink" title="解引用"></a>解引用</h1><p>取值运算作用于地址，取出地址的值</p>
+<hr>
+<h1 id="其他注意内容"><a href="#其他注意内容" class="headerlink" title="其他注意内容"></a>其他注意内容</h1><ul>
+<li><p>float，double型变量赋值时要写明小数部分<br><br>如：float a=5.0;<br><br>错误例：<br><br>float a=1,b;<br><br>b=7/2+a;<br><br>b的值为4.000000而非4.500000<br></p>
+</li>
+<li><p>int a，b；a=b=6；可以给a，b赋值<br></p>
+</li>
+<li><p>“a”占两个字节 ‘a’,’\0’<br></p>
+</li>
+<li><p>使用%3d输出时，变量大于等于3位数则输出原数，小于3位则前面加空格<br><br>%-3d，在后面加空格<br><br>使用%3d输入时，只会获得3个数字<br><br>%7.2f如果小数点多于2位，四舍五入<br></p>
+</li>
+<li><p>switch语句注意<br><br>case进入后注意break的使用<br><br>default<br></p>
+</li>
+<li><p>0假1真</p>
+</li>
+<li><p>注意结尾’\0’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">char str[5] &#x3D; &quot;good!&quot;;</span><br><span class="line">printf(&quot;%s&quot;, str);</span><br><span class="line">输出为：good!烫烫烫烫烫?,豄烫烫j&#123;蓇帱?</span><br><span class="line">缺少&#39;\0&#39;</span><br></pre></td></tr></table></figure></li>
+<li><p>函数前缺省默认为int型<br></p>
+</li>
+<li><p>简单变量做实参时，它和对应的形参之间数据传递方式是单向值传递<br></p>
+</li>
+<li><p>指针可以相减，比较，不能相加<br><br> 相减表示指针之间相隔元素数<br><br> 相加无意义<br></p>
+</li>
+<li><p>*px++；改变px指向的地址而不改变原本地址中px的内容<br></p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/21/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-使用VScode预览md文件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/21/%E4%BD%BF%E7%94%A8VScode%E9%A2%84%E8%A7%88md%E6%96%87%E4%BB%B6/">使用VScode预览md文件</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/21/%E4%BD%BF%E7%94%A8VScode%E9%A2%84%E8%A7%88md%E6%96%87%E4%BB%B6/" class="archive-article-date">
+  	<time datetime="2021-01-21T07:30:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用VScode预览md文件"><a href="#使用VScode预览md文件" class="headerlink" title="使用VScode预览md文件"></a>使用VScode预览md文件</h1><p>点击拓展(Extensions)或按下Ctrl+Shift+S<br>在上方搜索框中输入“Markdown Shortcuts”<br>点击安装(install)<br>安装完成后重启VScode<br>在编辑.md文件时按下Ctrl+Shift+V即可预览<br>双击对应位置即可跳转到对应代码  </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/21/%E4%BD%BF%E7%94%A8VScode%E9%A2%84%E8%A7%88md%E6%96%87%E4%BB%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Markdown-语法学习-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
