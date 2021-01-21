@@ -181,8 +181,8 @@
 <p><em>不包括二进制</em>  </p>
 </li>
 </ol>
-<p>八进制表示  0+数字（数字应属于0~7）  </p>
-<p>十六进制表示 0x+数字（数字属于0<del>9，a</del>f）</p>
+<p>八进制表示  0+数字（数字应属于0到7）  </p>
+<p>十六进制表示 0x+数字（数字属于0到9，a到f）</p>
 <hr>
 <h1 id="C语言基本数据类型"><a href="#C语言基本数据类型" class="headerlink" title="C语言基本数据类型"></a>C语言基本数据类型</h1><ol>
 <li>整形 int等整数类型</li>
@@ -211,7 +211,7 @@
 </li>
 </ol>
 <hr>
-<h1 id="转义字符”-quot"><a href="#转义字符”-quot" class="headerlink" title="转义字符”&quot;"></a>转义字符”&quot;</h1><ol>
+<h1 id="转义字符”-“"><a href="#转义字符”-“" class="headerlink" title="转义字符”\“"></a>转义字符”\“</h1><ol>
 <li>\后加单个字母<br><br>如\t,\a,\n,\\等</li>
 <li>\后加八进制整数，表示ASCII码表上的字符（八进制转十进制后对应）</li>
 <li>\后加多个字母<br><br>如\xef\xbf\xbd\xef\xbf\xbd -&gt; 锟斤拷</li>
@@ -235,10 +235,10 @@
 <p>输出为：<br><br>00CFF920  00CFF934  00CFF948 00CFF95C  00CFF970<br><br>00000001  00000002  00000003  00000004  00000005<br><br>00000001  00000002  00000003  00000004  00000005<br></p>
 <hr>
 <h1 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">定义array[4][5]，则：</span><br><span class="line">  *array -&gt; array[0][0]</span><br><span class="line">  *(array+1) -&gt; array[1][0]</span><br><span class="line">  *(*(array+1)+3) -&gt; array[1][3]</span><br></pre></td></tr></table></figure>
-<h2 id="数组指针与二维数组"><a href="#数组指针与二维数组" class="headerlink" title="数组指针与二维数组"></a>数组指针与二维数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">定义(*p)[]，则：</span><br><span class="line">*(*(p+1)+3)-&gt;array[1][3]</span><br></pre></td></tr></table></figure>
+<h2 id="数组指针与二维数组"><a href="#数组指针与二维数组" class="headerlink" title="数组指针与二维数组"></a>数组指针与二维数组</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">定义(*p)[]，则：</span><br><span class="line">  *(*(p+1)+3)-&gt;array[1][3]</span><br></pre></td></tr></table></figure>
 <p><strong>c语言中，多维数组是一维数组的线性扩展</strong></p>
 <hr>
-<h1 id="解引用"><a href="#解引用" class="headerlink" title="解引用"></a>解引用</h1><p>取值运算作用于地址，取出地址的值</p>
+<h1 id="解引用“-”"><a href="#解引用“-”" class="headerlink" title="解引用“*”"></a>解引用“*”</h1><p>取值运算作用于地址，取出地址的值</p>
 <hr>
 <h1 id="其他注意内容"><a href="#其他注意内容" class="headerlink" title="其他注意内容"></a>其他注意内容</h1><ul>
 <li><p>float，double型变量赋值时要写明小数部分<br><br>如：float a=5.0;<br><br>错误例：<br><br>float a=1,b;<br><br>b=7/2+a;<br><br>b的值为4.000000而非4.500000<br></p>
