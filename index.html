@@ -152,6 +152,174 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java哈希表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/26/Java%E5%93%88%E5%B8%8C%E8%A1%A8/">Java哈希表</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/26/Java%E5%93%88%E5%B8%8C%E8%A1%A8/" class="archive-article-date">
+  	<time datetime="2021-04-26T12:51:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java哈希表"><a href="#Java哈希表" class="headerlink" title="Java哈希表"></a>Java哈希表</h1><h2 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import java.util.HashMap;</span><br></pre></td></tr></table></figure>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HashMap&lt;type1,type2&gt; name &#x3D; new HashMap&lt;type1,type2&gt;();</span><br></pre></td></tr></table></figure>
+<h2 id="写入"><a href="#写入" class="headerlink" title="写入"></a>写入</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*.put(data1,data2);     &#x2F;&#x2F;*为对象名称</span><br></pre></td></tr></table></figure>
+<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*.get(data1);   &#x2F;&#x2F;获得data1对应的data2</span><br><span class="line">*.keyset();     &#x2F;&#x2F;获得所有data1</span><br><span class="line">*.vsules();     &#x2F;&#x2F;获得所有data1对应的data2</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*.remove(data1);    &#x2F;&#x2F;删除data1和其对应的data2</span><br><span class="line">*.clear();      &#x2F;&#x2F;删除全部</span><br></pre></td></tr></table></figure>
+
+<h2 id="计算大小"><a href="#计算大小" class="headerlink" title="计算大小"></a>计算大小</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*.size();</span><br></pre></td></tr></table></figure>
+<h2 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">HashMap&lt;Integer, String&gt; HashMap &#x3D; new HashMap&lt;&gt;();</span><br><span class="line"></span><br><span class="line">HashMap.put(1, &quot;Google&quot;);</span><br><span class="line">HashMap.put(2, &quot;Runoob&quot;);</span><br><span class="line">HashMap.put(3, &quot;ZhiHu&quot;);</span><br><span class="line"></span><br><span class="line">System.out.println(HashMap.keySet());</span><br><span class="line">System.out.println(HashMap.values());      &#x2F;&#x2F;输出所有data2</span><br><span class="line">System.out.println(HashMap.size());     &#x2F;&#x2F;输出长度</span><br><span class="line">HashMap.remove(3);      &#x2F;&#x2F;删除3</span><br><span class="line">System.out.println(HashMap.size());</span><br><span class="line">System.out.println(HashMap.get(1));</span><br><span class="line">System.out.println(HashMap.get(2));</span><br><span class="line">System.out.println(HashMap);        &#x2F;&#x2F;输出</span><br><span class="line">HashMap.clear();        &#x2F;&#x2F;全部删除</span><br><span class="line">System.out.println(HashMap.size());</span><br><span class="line">System.out.println(HashMap);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3]</span><br><span class="line">[Google, Runoob, ZhiHu]</span><br><span class="line">3</span><br><span class="line">2     </span><br><span class="line">Google</span><br><span class="line">Runoob</span><br><span class="line">&#123;1&#x3D;Google, 2&#x3D;Runoob&#125;</span><br><span class="line">0</span><br><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>图示：<br>| Integer | String |<br>| :—–: | :—-:  |<br>| 1 | Google |<br>| 2 | Runoob |</p>
+<h2 id="迭代-遍历"><a href="#迭代-遍历" class="headerlink" title="迭代(遍历)"></a>迭代(遍历)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (Integer i : HsahMap.keySet()) &#123;</span><br><span class="line">    System.out.println(&quot;key: &quot; + i + &quot; value: &quot; + HsahMap.get(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for(String value: HsahMap.values()) &#123;</span><br><span class="line">    System.out.print(value + &quot;, &quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/java/java-hashmap.html">菜鸟教程 | Java HashMap</a></p>
+<h2 id="使用例"><a href="#使用例" class="headerlink" title="使用例"></a>使用例</h2><p>获得整数组<code>nums</code>和整数目标值<code>target</code>，请你在该数组中找出和为目标值的两个整数，并返回他们的下标。    </p>
+<p>示例:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line">4</span><br><span class="line">2 7 11 15</span><br><span class="line">9</span><br><span class="line">输出：0 1</span><br></pre></td></tr></table></figure>
+<p>题解:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">import java.util.HashMap;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class twonum &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; 实例化</span><br><span class="line">        Scanner scanner &#x3D; new Scanner(System.in);</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; hashMap &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">        &#x2F;&#x2F; 获得数据</span><br><span class="line">        int num &#x3D; scanner.nextInt();</span><br><span class="line">        int[] nums &#x3D; new int[num];</span><br><span class="line">        for (int i &#x3D; 0; i &lt; num; i++) &#123;</span><br><span class="line">            nums[i] &#x3D; scanner.nextInt();</span><br><span class="line">        &#125;</span><br><span class="line">        int target &#x3D; scanner.nextInt();</span><br><span class="line">        &#x2F;&#x2F; 查找和输出</span><br><span class="line">        int[] indexs &#x3D; new int[2];</span><br><span class="line">        for (int i &#x3D; 0; i &lt; nums.length; i++) &#123;</span><br><span class="line">            if (hashMap.containsKey(nums[i])) &#123;     &#x2F;&#x2F;containskey 检查 hashMap 中是否存在指定的 key 对应的映射关系。</span><br><span class="line">                indexs[0] &#x3D; i;</span><br><span class="line">                indexs[1] &#x3D; hashMap.get(nums[i]);</span><br><span class="line">                for (int j &#x3D; 0; j &lt; 2; j++) &#123;</span><br><span class="line">                    System.out.println(indexs[j]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            &#x2F;&#x2F; 将数据存入 key为补数 ，value为下标</span><br><span class="line">            hashMap.put(target - nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+<p>来自<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/two-sum/">leetcode | 两数之和</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/26/Java%E5%93%88%E5%B8%8C%E8%A1%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-java笔记（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/01/23/java%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/">java笔记（1）</a>
+    </h1>
+  
+
+        
+        <a href="/2021/01/23/java%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2021-01-23T12:16:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>一个文件中可以有多个class（内部类），但只能有一个public class，并且该类名必须与文件名相一致<br><br>类的构成：</p>
+<ul>
+<li>成员变量/属性 </li>
+<li>成员方法/函数  </li>
+</ul>
+<p>一个类中最多只能有一个main函数（psvm），main方法可以有多个<br>main函数不属于class的成员函数，无法被其他类其他方法所调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">main函数:</span><br><span class="line"></span><br><span class="line">public static void main(String[] args)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="8种基本数据类型"><a href="#8种基本数据类型" class="headerlink" title="8种基本数据类型"></a>8种基本数据类型</h2><p>Boolean 布尔   true/false（全小写）  逻辑运算 </p>
+<p>byte 字节 1byte=8bits 存储有符号的，以二进制补码表示的整数 -128~127 默认值为0  节约空间 二进制文件常用 —左延伸  标准值  右延伸—</p>
+<p>整形<br>存储有符号的，以二进制补码表示的整数<br>short 2字节 -32768<del>32767，-2^15</del>2^15-1 默认值为0<br>int 4字节 -2^31<del>2^31-1 默认值为0    2开头十位数<br>long 8字节 -2^63</del>2^63-1 默认值为0L  9开头19位数<br>注意：整形数字默认为int，在将int范围内的数字赋给long时会发生隐式转换，当数字不属于int范围时，需要在其末尾加入大写的L</p>
+<p>浮点数<br>float 单精度 4字节 1.4<em>10^-45~3.4</em>10^38(无论正负) 默认值0.0f<br>double 双精度 8字节 4.9<em>10-324~1.7</em>10^308(无论正负) 默认值0.0d<br>都不能用来表示精确数字，近似数相减会得到0.0，float到double的显式转换会出现多余小数。float定义时要在末尾加f，double定义时末尾可省略d</p>
+<p>char 单一的16位Unicode字符 2字节 \u0000<del>\uffff 可储存任意字符<br>\u4e00</del>\u9fa5为汉字</p>
+<hr>
+<p>运算符<br>移位运算符</p>
+<blockquote>
+<blockquote>
+<p>除以  a&gt;&gt;1  除以2^1s<br>&lt;&lt;乘以  a&lt;&lt;2  乘以2^2<br>逻辑运算符<br>与&amp;&amp;<br>或||<br>非！<br>! &gt; &amp;&amp; &gt; ||</p>
+</blockquote>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/01/23/java%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-C语言学习笔记（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

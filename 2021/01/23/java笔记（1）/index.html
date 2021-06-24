@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021 | 49 の Blog</title>
+  <title>java笔记（1） | 49 の Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="49 の Blog">
-<meta property="og:url" content="http://example.com/archives/2021/index.html">
+  <meta name="description" content="类一个文件中可以有多个class（内部类），但只能有一个public class，并且该类名必须与文件名相一致类的构成：  成员变量&#x2F;属性  成员方法&#x2F;函数    一个类中最多只能有一个main函数（psvm），main方法可以有多个main函数不属于class的成员函数，无法被其他类其他方法所调用 12345main函数:public static void main(String[] args">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java笔记（1）">
+<meta property="og:url" content="http://example.com/2021/01/23/java%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/index.html">
 <meta property="og:site_name" content="49 の Blog">
+<meta property="og:description" content="类一个文件中可以有多个class（内部类），但只能有一个public class，并且该类名必须与文件名相一致类的构成：  成员变量&#x2F;属性  成员方法&#x2F;函数    一个类中最多只能有一个main函数（psvm），main方法可以有多个main函数不属于class的成员函数，无法被其他类其他方法所调用 12345main函数:public static void main(String[] args">
 <meta property="og:locale">
+<meta property="article:published_time" content="2021-01-23T12:16:35.000Z">
+<meta property="article:modified_time" content="2021-01-23T12:22:36.095Z">
 <meta property="article:author" content="teddy 49">
 <meta name="twitter:card" content="summary">
   
@@ -150,211 +154,184 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-java笔记（1）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/26/Java%E5%93%88%E5%B8%8C%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2021-04-26T12:51:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/26/Java%E5%93%88%E5%B8%8C%E8%A1%A8/">Java哈希表</a>
+    <h1 class="article-title" itemprop="name">
+      java笔记（1）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/01/23/java%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/" class="archive-article-date">
+        
+        <a href="/2021/01/23/java%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/" class="archive-article-date">
   	<time datetime="2021-01-23T12:16:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-23</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/01/23/java%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/">java笔记（1）</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>一个文件中可以有多个class（内部类），但只能有一个public class，并且该类名必须与文件名相一致<br><br>类的构成：</p>
+<ul>
+<li>成员变量/属性 </li>
+<li>成员方法/函数  </li>
+</ul>
+<p>一个类中最多只能有一个main函数（psvm），main方法可以有多个<br>main函数不属于class的成员函数，无法被其他类其他方法所调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">main函数:</span><br><span class="line"></span><br><span class="line">public static void main(String[] args)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="8种基本数据类型"><a href="#8种基本数据类型" class="headerlink" title="8种基本数据类型"></a>8种基本数据类型</h2><p>Boolean 布尔   true/false（全小写）  逻辑运算 </p>
+<p>byte 字节 1byte=8bits 存储有符号的，以二进制补码表示的整数 -128~127 默认值为0  节约空间 二进制文件常用 —左延伸  标准值  右延伸—</p>
+<p>整形<br>存储有符号的，以二进制补码表示的整数<br>short 2字节 -32768<del>32767，-2^15</del>2^15-1 默认值为0<br>int 4字节 -2^31<del>2^31-1 默认值为0    2开头十位数<br>long 8字节 -2^63</del>2^63-1 默认值为0L  9开头19位数<br>注意：整形数字默认为int，在将int范围内的数字赋给long时会发生隐式转换，当数字不属于int范围时，需要在其末尾加入大写的L</p>
+<p>浮点数<br>float 单精度 4字节 1.4<em>10^-45~3.4</em>10^38(无论正负) 默认值0.0f<br>double 双精度 8字节 4.9<em>10-324~1.7</em>10^308(无论正负) 默认值0.0d<br>都不能用来表示精确数字，近似数相减会得到0.0，float到double的显式转换会出现多余小数。float定义时要在末尾加f，double定义时末尾可省略d</p>
+<p>char 单一的16位Unicode字符 2字节 \u0000<del>\uffff 可储存任意字符<br>\u4e00</del>\u9fa5为汉字</p>
+<hr>
+<p>运算符<br>移位运算符</p>
+<blockquote>
+<blockquote>
+<p>除以  a&gt;&gt;1  除以2^1s<br>&lt;&lt;乘以  a&lt;&lt;2  乘以2^2<br>逻辑运算符<br>与&amp;&amp;<br>或||<br>非！<br>! &gt; &amp;&amp; &gt; ||</p>
+</blockquote>
+</blockquote>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/23/java%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/01/21/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-01-21T07:49:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-21</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/04/26/Java%E5%93%88%E5%B8%8C%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java哈希表
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/01/21/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C语言学习笔记（1）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/01/21/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/">C语言学习笔记（1）</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/01/21/%E4%BD%BF%E7%94%A8VScode%E9%A2%84%E8%A7%88md%E6%96%87%E4%BB%B6/" class="archive-article-date">
-  	<time datetime="2021-01-21T07:30:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/01/21/%E4%BD%BF%E7%94%A8VScode%E9%A2%84%E8%A7%88md%E6%96%87%E4%BB%B6/">使用VScode预览md文件</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/01/10/Markdown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0-1/" class="archive-article-date">
-  	<time datetime="2021-01-09T17:15:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/01/10/Markdown-%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0-1/">Markdown 语法学习|(1)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/01/09/My-First-Blog/" class="archive-article-date">
-  	<time datetime="2021-01-09T09:58:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/01/09/My-First-Blog/">My First Blog</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/01/09/hello-world/" class="archive-article-date">
-  	<time datetime="2021-01-08T20:18:13.974Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/01/09/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -377,8 +354,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
